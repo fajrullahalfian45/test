@@ -1,0 +1,559 @@
+/*!
+
+ =========================================================
+ * Material Bootstrap Wizard - v1.0.2
+ =========================================================
+ 
+ * Product Page: https://www.creative-tim.com/product/material-bootstrap-wizard
+ * Copyright 2017 Creative Tim (http://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/material-bootstrap-wizard/blob/master/LICENSE.md)
+ 
+ =========================================================
+ 
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
+
+
+
+.wizard-container {
+    padding-top: 50px;
+    z-index: 3;
+}
+
+.wizard-container .wizard-navigation {
+    position: relative;
+    top: 30px;
+}
+
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.wizard-card {
+    /*
+  min-height: 410px;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+*/
+}
+
+.wizard-card .picture-container {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+
+.wizard-card .picture {
+    width: 106px;
+    height: 106px;
+    background-color: #999999;
+    border: 4px solid #CCCCCC;
+    color: #FFFFFF;
+    border-radius: 50%;
+    margin: 5px auto;
+    overflow: hidden;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+.wizard-card .picture:hover {
+    border-color: #2ca8ff;
+}
+
+/*
+.moving-tab{
+    width: 200px !important;
+}
+*/
+
+.wizard-card .moving-tab {
+    position: absolute;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+    -webkit-font-smoothing: subpixel-antialiased;
+    top: -4px;
+    left: 0px;
+    /*    border-radius: 4px;*/
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.wizard-card[data-color="purple"] .moving-tab {
+    background-color: #9c27b0;
+    box-shadow: 0 16px 26px -10px rgba(156, 39, 176, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);
+}
+
+
+.wizard-card[data-color="orange"] .moving-tab {
+    background-color: #ff9800;
+        box-shadow: 0 16px 26px -10px rgba(255, 152, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(255, 152, 0, 0.2);
+}
+
+
+
+
+.wizard-card .picture-src {
+    width: 100%;
+}
+
+.wizard-card .tab-content {
+    min-height: 340px;
+    padding: 80px 15px;
+}
+
+.wizard-card .wizard-footer {
+    padding: 0 15px;
+}
+
+.wizard-card .wizard-footer .checkbox {
+    margin-top: 16px;
+}
+
+.wizard-card .disabled {
+    display: none;
+}
+
+.wizard-card .wizard-header {
+    text-align: center;
+    padding: 25px 0 35px;
+}
+
+.wizard-card .wizard-header h5 {
+    margin: 5px 0 0;
+}
+
+.wizard-card .nav-pills > li {
+    text-align: center;
+}
+
+.wizard-card .btn {
+    text-transform: uppercase;
+}
+
+.wizard-card .info-text {
+    text-align: center;
+/*    font-weight: 300;*/
+    margin: 10px 0 30px;
+}
+
+.wizard-card .choice {
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.wizard-card .choice .icon {
+    text-align: center;
+    vertical-align: middle;
+    height: 116px;
+    width: 116px;
+    border-radius: 50%;
+    color: #999999;
+    margin: 0 auto 20px;
+    border: 4px solid #CCCCCC;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+.wizard-card .choice i {
+    font-size: 40px;
+    line-height: 111px;
+}
+
+.wizard-card .choice:hover .icon,
+.wizard-card .choice.active .icon {
+    border-color: #2ca8ff;
+}
+
+.wizard-card .choice input[type="radio"],
+.wizard-card .choice input[type="checkbox"] {
+    position: absolute;
+    left: -10000px;
+    z-index: -1;
+}
+
+.wizard-card .btn-finish {
+    display: none;
+}
+
+.wizard-card .description {
+    color: #999999;
+    font-size: 14px;
+}
+
+.wizard-card .wizard-title {
+    margin: 0;
+}
+
+
+
+
+
+.btn {
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    padding: 12px 30px;
+    margin: 10px 1px;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    will-change: box-shadow, transform;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn::-moz-focus-inner {
+    border: 0;
+}
+
+.btn,
+.btn.btn-default {
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12);
+}
+
+.btn,
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn:active:focus,
+.btn:active:hover,
+.btn.active:focus,
+.btn.active:hover,
+.open > .btn.dropdown-toggle,
+.open > .btn.dropdown-toggle:focus,
+.open > .btn.dropdown-toggle:hover,
+.btn.btn-default,
+.btn.btn-default:hover,
+.btn.btn-default:focus,
+.btn.btn-default:active,
+.btn.btn-default.active,
+.btn.btn-default:active:focus,
+.btn.btn-default:active:hover,
+.btn.btn-default.active:focus,
+.btn.btn-default.active:hover,
+.open > .btn.btn-default.dropdown-toggle,
+.open > .btn.btn-default.dropdown-toggle:focus,
+.open > .btn.btn-default.dropdown-toggle:hover {
+    background-color: #999999;
+    color: #FFFFFF;
+}
+
+.btn:focus,
+.btn:active,
+.btn:hover,
+.btn.btn-default:focus,
+.btn.btn-default:active,
+.btn.btn-default:hover {
+    box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
+}
+
+
+
+.btn.btn-danger {
+    box-shadow: 0 2px 2px 0 rgba(244, 67, 54, 0.14), 0 3px 1px -2px rgba(244, 67, 54, 0.2), 0 1px 5px 0 rgba(244, 67, 54, 0.12);
+}
+
+.btn.btn-danger,
+.btn.btn-danger:hover,
+.btn.btn-danger:focus,
+.btn.btn-danger:active,
+.btn.btn-danger.active,
+.btn.btn-danger:active:focus,
+.btn.btn-danger:active:hover,
+.btn.btn-danger.active:focus,
+.btn.btn-danger.active:hover,
+.open > .btn.btn-danger.dropdown-toggle,
+.open > .btn.btn-danger.dropdown-toggle:focus,
+.open > .btn.btn-danger.dropdown-toggle:hover {
+    background-color: #f44336;
+    color: #FFFFFF;
+}
+
+.btn.btn-danger:focus,
+.btn.btn-danger:active,
+.btn.btn-danger:hover {
+    box-shadow: 0 14px 26px -12px rgba(244, 67, 54, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 67, 54, 0.2);
+}
+
+.btn.btn-danger.disabled,
+.btn.btn-danger.disabled:hover,
+.btn.btn-danger.disabled:focus,
+.btn.btn-danger.disabled.focus,
+.btn.btn-danger.disabled:active,
+.btn.btn-danger.disabled.active,
+.btn.btn-danger:disabled,
+.btn.btn-danger:disabled:hover,
+.btn.btn-danger:disabled:focus,
+.btn.btn-danger:disabled.focus,
+.btn.btn-danger:disabled:active,
+.btn.btn-danger:disabled.active,
+.btn.btn-danger[disabled],
+.btn.btn-danger[disabled]:hover,
+.btn.btn-danger[disabled]:focus,
+.btn.btn-danger[disabled].focus,
+.btn.btn-danger[disabled]:active,
+.btn.btn-danger[disabled].active,
+fieldset[disabled] .btn.btn-danger,
+fieldset[disabled] .btn.btn-danger:hover,
+fieldset[disabled] .btn.btn-danger:focus,
+fieldset[disabled] .btn.btn-danger.focus,
+fieldset[disabled] .btn.btn-danger:active,
+fieldset[disabled] .btn.btn-danger.active {
+    box-shadow: none;
+}
+
+.btn.btn-danger.btn-simple {
+    background-color: transparent;
+    color: #f44336;
+    box-shadow: none;
+}
+
+.btn.btn-danger.btn-simple:hover,
+.btn.btn-danger.btn-simple:focus,
+.btn.btn-danger.btn-simple:active {
+    background-color: transparent;
+    color: #f44336;
+}
+
+.btn:focus,
+.btn:active,
+.btn:active:focus {
+    outline: 0;
+}
+
+.btn.btn-round {
+    border-radius: 30px;
+}
+
+.btn:not(.btn-just-icon):not(.btn-fab) .fa {
+    font-size: 18px;
+    margin-top: -2px;
+    position: relative;
+    top: 2px;
+}
+
+.btn.btn-fab {
+    border-radius: 50%;
+    font-size: 24px;
+    height: 56px;
+    margin: auto;
+    min-width: 56px;
+    width: 56px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    line-height: normal;
+}
+
+.btn.btn-fab .ripple-container {
+    border-radius: 50%;
+}
+
+.btn.btn-fab.btn-fab-mini,
+.btn-group-sm .btn.btn-fab {
+    height: 40px;
+    min-width: 40px;
+    width: 40px;
+}
+
+.btn.btn-fab.btn-fab-mini.material-icons,
+.btn-group-sm .btn.btn-fab.material-icons {
+    top: -3.5px;
+    left: -3.5px;
+}
+
+.btn.btn-fab.btn-fab-mini .material-icons,
+.btn-group-sm .btn.btn-fab .material-icons {
+    font-size: 17px;
+}
+
+.btn.btn-fab i.material-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-12px, -12px);
+    line-height: 24px;
+    width: 24px;
+    font-size: 24px;
+}
+
+.btn.btn-lg,
+.btn-group-lg .btn {
+    font-size: 14px;
+    padding: 18px 36px;
+}
+
+.btn.btn-sm,
+.btn-group-sm .btn {
+    padding: 5px 20px;
+    font-size: 11px;
+}
+
+.btn.btn-xs,
+.btn-group-xs .btn {
+    padding: 4px 15px;
+    font-size: 10px;
+}
+
+.btn.btn-just-icon {
+    font-size: 18px;
+    padding: 10px 10px;
+    line-height: 1em;
+}
+
+.btn.btn-just-icon i {
+    width: 20px;
+}
+
+.btn.btn-just-icon.btn-lg {
+    font-size: 22px;
+    padding: 13px 18px;
+}
+
+.btn .material-icons {
+    vertical-align: middle;
+    font-size: 17px;
+    top: -1px;
+    position: relative;
+}
+
+/*            Navigation menu                */
+.nav-pills {
+    background-color: #f9f4ef;
+}
+
+.nav-pills > li + li {
+    margin-left: 0;
+}
+
+.nav-pills > li > a {
+    outline: none;
+    border: 0 !important;
+    border-radius: 0;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 100px;
+    text-align: center;
+    color: #555555 !important;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus,
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus {
+    background-color: inherit;
+}
+
+.nav-pills > li i {
+    display: block;
+    font-size: 30px;
+    padding: 15px 0;
+}
+
+.popover,
+.tooltip-inner {
+    color: #555555;
+    line-height: 1.5em;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+
+.popover {
+    padding: 0;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.popover.left > .arrow,
+.popover.right > .arrow,
+.popover.top > .arrow,
+.popover.bottom > .arrow {
+    border: none;
+}
+
+.popover-title {
+    background-color: #FFFFFF;
+    border: none;
+    padding: 15px 15px 5px;
+    font-size: 1.3em;
+}
+
+.popover-content {
+    padding: 10px 15px 15px;
+    line-height: 1.4;
+}
+
+.tooltip.in {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    -o-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
+}
+
+.tooltip {
+    opacity: 0;
+    transition: opacity, transform .2s ease;
+    -webkit-transform: translate3d(0, 5px, 0);
+    -moz-transform: translate3d(0, 5px, 0);
+    -o-transform: translate3d(0, 5px, 0);
+    -ms-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+}
+
+.tooltip.left .tooltip-arrow {
+    border-left-color: #FFFFFF;
+}
+
+.tooltip.right .tooltip-arrow {
+    border-right-color: #FFFFFF;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: #FFFFFF;
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #FFFFFF;
+}
+
+.tooltip-inner {
+    padding: 10px 15px;
+    min-width: 130px;
+}
+
+.footer {
+    position: relative;
+    bottom: 20px;
+    right: 0px;
+    width: 100%;
+    color: #FFFFFF;
+    z-index: 4;
+    text-align: right;
+    margin-top: 60px;
+    text-shadow: 0 0px 1px black;
+}
+
+.footer a {
+    color: #FFFFFF;
+}
+
+.footer .heart {
+    color: #FF3B30;
+}
+
+.withripple {
+    position: relative;
+}
+
